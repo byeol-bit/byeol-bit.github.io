@@ -26,13 +26,19 @@
       <div class="projects-container fade-in-up">
         <div class="project-card">
           <div class="project-header">
-            <h2 class="project-title">전기자동차 배터리 공장 생산 관리 시스템</h2>
+            <h2 class="project-title">
+              전기자동차 배터리 공장 생산 관리 시스템
+            </h2>
             <span class="project-badge">MES</span>
             <span class="project-badge">HIS</span>
           </div>
           <p class="project-description">
-            ERP 시스템의 하위 모듈 중 '제조공장생산관리(MES)' 모듈을 컨버전 및 유지보수하였습니다.
+            ERP 시스템의 하위 모듈 중 '제조공장생산관리(MES)' 모듈을 컨버전 및
+            유지보수하였습니다.
           </p>
+          <div class="project-images">
+            <!-- 이미지를 여기에 추가하세요 -->
+          </div>
           <div class="project-tech">
             <span class="tech-tag">C#</span>
             <span class="tech-tag">winform</span>
@@ -41,73 +47,223 @@
           </div>
           <div class="project-links">
             <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">데모</a>
             <a href="#" class="project-link">회고</a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <h2 class="project-title">데스크톱 애플리케이션</h2>
+            <h2 class="project-title">부산보건환경연구원 관제프로그램</h2>
             <span class="project-badge">실시간 관제</span>
             <span class="project-badge">통계 분석</span>
           </div>
           <p class="project-description">
-            Windows Forms 기반의 데스크톱 애플리케이션입니다. 사용자 친화적인
-            UI/UX를 제공하며, 파일 관리 및 데이터 처리 기능을 포함합니다.
+            부산 전역의 미세먼지 수치를 실시간으로 표출하고 보고서에
+            필요한 각종 통계자료를 만들어주는 데스크탑 앱입니다. <br/>
+            10여년간 다른 업체에서 팀별로 제공한 4개의 프로그램을 사용하다
+            통합 및 고도화를 하기위해 업체를 변경해 새로 재개발하게 된
+            프로젝트입니다. <br/>
+            실시간 자료가 디비에 들어오는 순간 디비 프로시저를 통해 상태값을 달아주는 기능과 
+            보고서에 필요한 통계자료를 위한 <br />
+            복잡한 디비 쿼리 구현, 화면에 맞는 달력 커스터마이징에 힘썼습니다.
           </p>
+          <div class="project-images">
+            <img
+              onclick="openImageModal(this.src)"
+              id="airbrain-page1"
+              class="project-image"
+              src="/public/dotnet/airbrain/page1.png"
+              alt="관제화면"
+            />
+
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page2.png"
+              alt="관제화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page3.png"
+              alt="관제화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page4.png"
+              alt="관제화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page5.png"
+              alt="관제화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page6.png"
+              alt="관제화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page7.png"
+              alt="관제화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              class="project-image"
+              src="/public/dotnet/airbrain/page8.png"
+              alt="관제화면"
+            />
+          </div>
           <div class="project-tech">
             <span class="tech-tag">C#</span>
             <span class="tech-tag">winform</span>
             <span class="tech-tag">mariadb</span>
             <span class="tech-tag">procedure</span>
+            <span class="tech-tag">1인 개발</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link-on">GitHub</a>
-            <a href="#" class="project-link">데모</a>
+            <a href="https://github.com/byeol-bit/AIRBRAIN.git" target="_blank" class="project-link-on">GitHub</a>
             <a href="#" class="project-link">회고</a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <h2 class="project-title">마이크로서비스 아키텍처</h2>
-            <span class="project-badge">.NET 6</span>
+            <h2 class="project-title">한국도로공사 고속도로 대기오염 분석 프로그램</h2>
+            <span class="project-badge">대기 모델링</span>
+            <span class="project-badge">통계 분석</span>
           </div>
           <p class="project-description">
-            마이크로서비스 아키텍처를 구현한 프로젝트입니다. Docker를 사용하여
-            컨테이너화하고, Kubernetes로 오케스트레이션했습니다.
+            고속도로의 대기오염 현황 파악 및 관리를 위한 데스크탑 앱을 개발했습니다. <br />
+            해당 프로젝트에서는 차종별, 노션별, 콘존별 배출량을 산정이 핵심과제였기에 기초자료를 모아 확인, 분류, 재가공을 통해<br />
+            배출량을 산정하는 알고리즘을 환경팀과 함께 6개월에 걸쳐 구현하였고,
+            고속도로를 GIS상에서 콘존이란 단위로 쪼개고 사용자가 설정한 범위내에 정확한 콘존단위의 고속도로를
+            표출해주는 부분에 많은 공을 들였습니다.
           </p>
+          <div class="project-images">
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-main"
+              class="project-image"
+              src="/public/dotnet/highway/main.png"
+              alt="알고리즘"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-page1"
+              class="project-image"
+              src="/public/dotnet/highway/page1.png"
+              alt="프로그램사진"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-page2"
+              class="project-image"
+              src="/public/dotnet/highway/page2.png"
+              alt="프로그램사진"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-page3"
+              class="project-image"
+              src="/public/dotnet/highway/page3.png"
+              alt="프로그램사진"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-page4"
+              class="project-image"
+              src="/public/dotnet/highway/page4.png"
+              alt="프로그램사진"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-page5"
+              class="project-image"
+              src="/public/dotnet/highway/page5.png"
+              alt="프로그램사진"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="highway-page6"
+              class="project-image"
+              src="/public/dotnet/highway/page6.png"
+              alt="프로그램사진"
+            />
+          </div>
           <div class="project-tech">
             <span class="tech-tag">C#</span>
-            <span class="tech-tag">.NET 6</span>
-            <span class="tech-tag">Docker</span>
-            <span class="tech-tag">Kubernetes</span>
+            <span class="tech-tag">winform</span>
+            <span class="tech-tag">mariadb</span>
+            <span class="tech-tag">1인 개발</span>
           </div>
           <div class="project-links">
             <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">데모</a>
             <a href="#" class="project-link">회고</a>
           </div>
         </div>
 
         <div class="project-card">
           <div class="project-header">
-            <h2 class="project-title">게임 서버</h2>
-            <span class="project-badge">Unity</span>
+            <h2 class="project-title">기상 분석 프로그램</h2>
+            <span class="project-badge">통계 분석</span>
           </div>
           <p class="project-description">
-            Unity 게임을 위한 멀티플레이어 서버입니다. 실시간 통신과 게임 로직을
-            처리하며, 높은 동시 접속자를 지원합니다.
+            기상자료 API를 활용한 기상 분석 데스트탑 앱을 개발했습니다. <br />
+            지도에 사용자가 선택한 위치에서 거리기반으로 가장 가까운 20개의 기상대 표시해주는 기능과 <br /> 
+            선택한 기상대의 기상자료 API를 활용하여, 분석자료, 시계열그래프, 바랑장미를 표출하는 기능에 힘썼습니다.
           </p>
+          <div class="project-images">
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page1"
+              class="project-image"
+              src="/public/dotnet/cesare-mt/page1.png"
+              alt="지도화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page2"
+              class="project-image"
+              src="/public/dotnet/cesare-mt/page2.png"
+              alt="분석화면"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page3"
+              class="project-image"
+              src="/public/dotnet/cesare-mt/page3.png"
+              alt="분석화면3"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page4"
+              class="project-image"
+              src="/public/dotnet/cesare-mt/page4.png"
+              alt="분석화면4"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page5"
+              class="project-image"
+              src="/public/dotnet/cesare-mt/page5.png"
+              alt="분석화면5"
+            />
+          </div>
           <div class="project-tech">
             <span class="tech-tag">C#</span>
-            <span class="tech-tag">Unity</span>
-            <span class="tech-tag">Netcode</span>
+            <span class="tech-tag">winform</span>
+            <span class="tech-tag">sqlite_3</span>
+            <span class="tech-tag">기상자료 api</span>
+            <span class="tech-tag">1인 개발</span>
           </div>
           <div class="project-links">
             <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">데모</a>
             <a href="#" class="project-link">회고</a>
           </div>
         </div>
@@ -118,5 +274,50 @@
         <p>깃허브 링크</p>
       </footer>
     </main>
+
+    <!-- 이미지 확대 모달 -->
+    <div id="imageModal" class="image-modal">
+      <img
+        id="modalImage"
+        class="image-modal-content"
+        src=""
+        alt="확대된 이미지"
+      />
+    </div>
+
+    <script>
+      function openImageModal(imageSrc) {
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("modalImage");
+        modalImg.src = imageSrc;
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById("imageModal");
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      // 모달 배경 클릭 시 닫기
+      window.addEventListener("DOMContentLoaded", function () {
+        const modal = document.getElementById("imageModal");
+        if (modal) {
+          modal.addEventListener("click", function (e) {
+            if (e.target === modal) {
+              closeImageModal();
+            }
+          });
+        }
+
+        // ESC 키로 닫기
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape") {
+            closeImageModal();
+          }
+        });
+      });
+    </script>
   </body>
 </html>

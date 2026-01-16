@@ -26,22 +26,45 @@
       <div class="projects-container fade-in-up">
         <div class="project-card">
           <div class="project-header">
-            <h2 class="project-title">메모장 애플리케이션</h2>
-            <span class="project-badge">Electron</span>
+            <h2 class="project-title">자료 송수신 프로그램</h2>
+            <span class="project-badge">사이드 프로젝트</span>
           </div>
           <p class="project-description">
-            Electron과 React를 활용한 크로스 플랫폼 메모장 애플리케이션입니다.
-            마크다운 편집을 지원하며, 로컬 파일 시스템과 연동합니다.
+            전국 각지의 운고계 서버에 실시간으로 저장되는 파일 자료들을 SFTP 방식으로 특정 서버로 송신하는 간단한 프로그램입니다. <br />
+
           </p>
+          <div class="project-images">
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page5"
+              class="project-image"
+              src="/public/electron/page1.png"
+              alt="송수신화면1"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page5"
+              class="project-image"
+              src="/public/electron/page2.png"
+              alt="송수신화면2"
+            />
+            <img
+              onclick="openImageModal(this.src)"
+              id="cesare-mt-page5"
+              class="project-image"
+              src="/public/electron/page3.png"
+              alt="송수신화면3"
+            />
+          </div>
           <div class="project-tech">
             <span class="tech-tag">Electron</span>
             <span class="tech-tag">React</span>
-            <span class="tech-tag">TypeScript</span>
             <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">SFTP</span>
           </div>
           <div class="project-links">
             <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">다운로드</a>
+            <a href="#" class="project-link">회고</a>
           </div>
         </div>
       </div>
@@ -51,5 +74,45 @@
         <p>깃허브 링크</p>
       </footer>
     </main>
+
+    <!-- 이미지 확대 모달 -->
+    <div id="imageModal" class="image-modal">
+      <img id="modalImage" class="image-modal-content" src="" alt="확대된 이미지" />
+    </div>
+
+    <script>
+      function openImageModal(imageSrc) {
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        modalImg.src = imageSrc;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeImageModal() {
+        const modal = document.getElementById('imageModal');
+        modal.classList.remove('active');
+        document.body.style.overflow = 'auto';
+      }
+
+      // 모달 배경 클릭 시 닫기
+      window.addEventListener('DOMContentLoaded', function() {
+        const modal = document.getElementById('imageModal');
+        if (modal) {
+          modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+              closeImageModal();
+            }
+          });
+        }
+
+        // ESC 키로 닫기
+        document.addEventListener('keydown', function(e) {
+          if (e.key === 'Escape') {
+            closeImageModal();
+          }
+        });
+      });
+    </script>
   </body>
 </html>
