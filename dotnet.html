@@ -1,425 +1,331 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" href="index.css" />
-  </head>
-  <body>
-    <main class="container">
-      <div class="top-nav fade-in-up">
-        <div>
-          <a href="./index.html" class="back-link">← 뒤로가기</a>
-        </div>
-        <div class="top-nav-right">
-          <button>
-            <img src="/public/fa-moon.png" alt="다크모드" />
-          </button>
-          <a href="#">사용 가이드</a>
-        </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="index.css" />
+</head>
+
+<body>
+  <main class="container">
+    <div class="top-nav fade-in-up">
+      <div>
+        <a href="./index.html" class="back-link">← 뒤로가기</a>
       </div>
-
-      <header class="header-area fade-in-up">
-        <h1 class="portfolio-title">C# 프로젝트</h1>
-        <p class="portfolio-subtitle">.NET 기반으로 개발한 프로젝트들</p>
-      </header>
-
-      <div class="projects-container fade-in-up">
-        <div class="project-card">
-          <div class="project-header">
-            <h2 class="project-title">
-              전기자동차 배터리 공장 생산 관리 시스템
-            </h2>
-            <span class="project-badge">MES</span>
-            <span class="project-badge">HIS</span>
-          </div>
-          <p class="project-description">
-            ERP 시스템의 하위 모듈 중 '제조공장생산관리(MES)' 모듈을 컨버전 및
-            유지보수하였습니다.
-          </p>
-          <div class="project-images">
-            <!-- 이미지를 여기에 추가하세요 -->
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">winform</span>
-            <span class="tech-tag">PLC 통신</span>
-            <span class="tech-tag">Oracle</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link" onclick="openRetroModal('전기자동차 배터리 공장 생산 관리 시스템'); return false;">회고</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h2 class="project-title">부산보건환경연구원 관제프로그램</h2>
-            <span class="project-badge">실시간 관제</span>
-            <span class="project-badge">통계 분석</span>
-          </div>
-          <p class="project-description">
-            부산 전역의 미세먼지 수치를 실시간으로 표출하고 보고서에
-            필요한 각종 통계자료를 만들어주는 데스크탑 앱입니다. <br/>
-            10여년간 다른 업체에서 팀별로 제공한 4개의 프로그램을 사용하다
-            통합 및 고도화를 하기위해 업체를 변경해 새로 재개발하게 된
-            프로젝트입니다. <br/>
-            실시간 자료가 디비에 들어오는 순간 디비 프로시저를 통해 상태값을 달아주는 기능과 
-            보고서에 필요한 통계자료를 위한 <br />
-            복잡한 디비 쿼리 구현, 화면에 맞는 달력 커스터마이징에 힘썼습니다.
-          </p>
-          <div class="project-images">
-            <img
-              onclick="openImageModal(this.src)"
-              id="airbrain-page1"
-              class="project-image"
-              src="/public/dotnet/airbrain/page1.png"
-              alt="관제화면"
-            />
-
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page2.png"
-              alt="관제화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page3.png"
-              alt="관제화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page4.png"
-              alt="관제화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page5.png"
-              alt="관제화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page6.png"
-              alt="관제화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page7.png"
-              alt="관제화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              class="project-image"
-              src="/public/dotnet/airbrain/page8.png"
-              alt="관제화면"
-            />
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">winform</span>
-            <span class="tech-tag">mariadb</span>
-            <span class="tech-tag">procedure</span>
-            <span class="tech-tag">1인 개발</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/byeol-bit/AIRBRAIN.git" target="_blank" class="project-link-on">GitHub</a>
-            <a href="#" class="project-link" onclick="openRetroModal('부산보건환경연구원 관제프로그램'); return false;">회고</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h2 class="project-title">한국도로공사 고속도로 대기오염 분석 프로그램</h2>
-            <span class="project-badge">대기 모델링</span>
-            <span class="project-badge">통계 분석</span>
-          </div>
-          <p class="project-description">
-            고속도로의 대기오염 현황 파악 및 관리를 위한 데스크탑 앱을 개발했습니다. <br />
-            해당 프로젝트에서는 차종별, 노션별, 콘존별 배출량을 산정이 핵심과제였기에 기초자료를 모아 확인, 분류, 재가공을 통해<br />
-            배출량을 산정하는 알고리즘을 환경팀과 함께 6개월에 걸쳐 구현하였고,
-            고속도로를 GIS상에서 콘존이란 단위로 쪼개고 사용자가 설정한 범위내에 정확한 콘존단위의 고속도로를
-            표출해주는 부분에 많은 공을 들였습니다.
-          </p>
-          <div class="project-images">
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-main"
-              class="project-image"
-              src="/public/dotnet/highway/main.png"
-              alt="알고리즘"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-page1"
-              class="project-image"
-              src="/public/dotnet/highway/page1.png"
-              alt="프로그램사진"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-page2"
-              class="project-image"
-              src="/public/dotnet/highway/page2.png"
-              alt="프로그램사진"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-page3"
-              class="project-image"
-              src="/public/dotnet/highway/page3.png"
-              alt="프로그램사진"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-page4"
-              class="project-image"
-              src="/public/dotnet/highway/page4.png"
-              alt="프로그램사진"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-page5"
-              class="project-image"
-              src="/public/dotnet/highway/page5.png"
-              alt="프로그램사진"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="highway-page6"
-              class="project-image"
-              src="/public/dotnet/highway/page6.png"
-              alt="프로그램사진"
-            />
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">winform</span>
-            <span class="tech-tag">mariadb</span>
-            <span class="tech-tag">1인 개발</span>
-          </div>
-          <div class="project-links">
-            <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link" onclick="openRetroModal('한국도로공사 고속도로 대기오염 분석 프로그램'); return false;">회고</a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-header">
-            <h2 class="project-title">기상 분석 프로그램</h2>
-            <span class="project-badge">통계 분석</span>
-          </div>
-          <p class="project-description">
-            기상자료 API를 활용한 기상 분석 데스트탑 앱을 개발했습니다. <br />
-            지도에 사용자가 선택한 위치에서 거리기반으로 가장 가까운 20개의 기상대 표시해주는 기능과 <br /> 
-            선택한 기상대의 기상자료 API를 활용하여, 분석자료, 시계열그래프, 바랑장미를 표출하는 기능에 힘썼습니다.
-          </p>
-          <div class="project-images">
-            <img
-              onclick="openImageModal(this.src)"
-              id="cesare-mt-page1"
-              class="project-image"
-              src="/public/dotnet/cesare-mt/page1.png"
-              alt="지도화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="cesare-mt-page2"
-              class="project-image"
-              src="/public/dotnet/cesare-mt/page2.png"
-              alt="분석화면"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="cesare-mt-page3"
-              class="project-image"
-              src="/public/dotnet/cesare-mt/page3.png"
-              alt="분석화면3"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="cesare-mt-page4"
-              class="project-image"
-              src="/public/dotnet/cesare-mt/page4.png"
-              alt="분석화면4"
-            />
-            <img
-              onclick="openImageModal(this.src)"
-              id="cesare-mt-page5"
-              class="project-image"
-              src="/public/dotnet/cesare-mt/page5.png"
-              alt="분석화면5"
-            />
-          </div>
-          <div class="project-tech">
-            <span class="tech-tag">C#</span>
-            <span class="tech-tag">winform</span>
-            <span class="tech-tag">sqlite_3</span>
-            <span class="tech-tag">기상자료 api</span>
-            <span class="tech-tag">1인 개발</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/byeol-bit/cesare-mt.git" target="_blank" class="project-link-on">GitHub</a>
-            <a href="#" class="project-link" onclick="openRetroModal('기상 분석 프로그램'); return false;">회고</a>
-          </div>
-        </div>
+      <div class="top-nav-right">
+        <button>
+          <img src="/public/fa-moon.png" alt="다크모드" />
+        </button>
+        <a href="#">사용 가이드</a>
       </div>
-
-      <footer>
-        <p>@2026 01.14 Portfolio. All rights reserved.</p>
-        <p>깃허브 링크</p>
-      </footer>
-    </main>
-
-    <!-- 이미지 확대 모달 -->
-    <div id="imageModal" class="image-modal">
-      <img
-        id="modalImage"
-        class="image-modal-content"
-        src=""
-        alt="확대된 이미지"
-      />
     </div>
 
-    <!-- 회고 모달 -->
-    <div id="retroModal" class="retro-modal">
-      <div class="retro-modal-content">
-        <div class="retro-modal-header">
-          <h2 id="retroModalTitle" class="retro-modal-title">프로젝트 회고</h2>
-          <button class="retro-modal-close" onclick="closeRetroModal()">&times;</button>
+    <header class="header-area fade-in-up">
+      <h1 class="portfolio-title">C# 프로젝트</h1>
+      <p class="portfolio-subtitle">.NET 기반으로 개발한 프로젝트들</p>
+    </header>
+
+    <div class="projects-container fade-in-up">
+      <div class="project-card">
+        <div class="project-header">
+          <h2 class="project-title">
+            전기자동차 배터리 공장 생산 관리 시스템
+          </h2>
+          <span class="project-badge">MES</span>
+          <span class="project-badge">HIS</span>
         </div>
-        <div class="retro-modal-body">
-          <div id="retroModalContent" class="retro-content">
-            <!-- 회고 내용이 여기에 표시됩니다 -->
-          </div>
+        <p class="project-description">
+          ERP 시스템의 하위 모듈 중 '제조공장생산관리(MES)' 모듈을 컨버전 및
+          유지보수하였습니다.
+        </p>
+        <div class="project-images">
+          <!-- 이미지를 여기에 추가하세요 -->
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">winform</span>
+          <span class="tech-tag">PLC 통신</span>
+          <span class="tech-tag">Oracle</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+          <a href="#" class="project-link" onclick="openRetroModal('전기자동차 배터리 공장 생산 관리 시스템'); return false;">회고</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h2 class="project-title">부산보건환경연구원 관제프로그램</h2>
+          <span class="project-badge">실시간 관제</span>
+          <span class="project-badge">통계 분석</span>
+        </div>
+        <p class="project-description">
+          부산 전역의 미세먼지 수치를 실시간으로 표출하고 보고서에
+          필요한 각종 통계자료를 만들어주는 데스크탑 앱입니다. <br />
+          10여년간 다른 업체에서 팀별로 제공한 4개의 프로그램을 사용하다
+          통합 및 고도화를 하기위해 업체를 변경해 새로 재개발하게 된
+          프로젝트입니다. <br />
+          실시간 자료가 디비에 들어오는 순간 디비 프로시저를 통해 상태값을 달아주는 기능과
+          보고서에 필요한 통계자료를 위한 <br />
+          복잡한 디비 쿼리 구현, 화면에 맞는 달력 커스터마이징에 힘썼습니다.
+        </p>
+        <div class="project-images">
+          <img onclick="openImageModal(this.src)" id="airbrain-page1" class="project-image"
+            src="/public/dotnet/airbrain/page1.png" alt="관제화면" />
+
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page2.png"
+            alt="관제화면" />
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page3.png"
+            alt="관제화면" />
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page4.png"
+            alt="관제화면" />
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page5.png"
+            alt="관제화면" />
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page6.png"
+            alt="관제화면" />
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page7.png"
+            alt="관제화면" />
+          <img onclick="openImageModal(this.src)" class="project-image" src="/public/dotnet/airbrain/page8.png"
+            alt="관제화면" />
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">winform</span>
+          <span class="tech-tag">mariadb</span>
+          <span class="tech-tag">procedure</span>
+          <span class="tech-tag">1인 개발</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/byeol-bit/AIRBRAIN.git" target="_blank" class="project-link-on">GitHub</a>
+          <a href="#" class="project-link" onclick="openRetroModal('부산보건환경연구원 관제프로그램'); return false;">회고</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h2 class="project-title">한국도로공사 고속도로 대기오염 분석 프로그램</h2>
+          <span class="project-badge">대기 모델링</span>
+          <span class="project-badge">통계 분석</span>
+        </div>
+        <p class="project-description">
+          고속도로의 대기오염 현황 파악 및 관리를 위한 데스크탑 앱을 개발했습니다. <br />
+          해당 프로젝트에서는 차종별, 노션별, 콘존별 배출량을 산정이 핵심과제였기에 기초자료를 모아 확인, 분류, 재가공을 통해<br />
+          배출량을 산정하는 알고리즘을 환경팀과 함께 6개월에 걸쳐 구현하였고,
+          고속도로를 GIS상에서 콘존이란 단위로 쪼개고 사용자가 설정한 범위내에 정확한 콘존단위의 고속도로를
+          표출해주는 부분에 많은 공을 들였습니다.
+        </p>
+        <div class="project-images">
+          <img onclick="openImageModal(this.src)" id="highway-main" class="project-image"
+            src="/public/dotnet/highway/main.png" alt="알고리즘" />
+          <img onclick="openImageModal(this.src)" id="highway-page1" class="project-image"
+            src="/public/dotnet/highway/page1.png" alt="프로그램사진" />
+          <img onclick="openImageModal(this.src)" id="highway-page2" class="project-image"
+            src="/public/dotnet/highway/page2.png" alt="프로그램사진" />
+          <img onclick="openImageModal(this.src)" id="highway-page3" class="project-image"
+            src="/public/dotnet/highway/page3.png" alt="프로그램사진" />
+          <img onclick="openImageModal(this.src)" id="highway-page4" class="project-image"
+            src="/public/dotnet/highway/page4.png" alt="프로그램사진" />
+          <img onclick="openImageModal(this.src)" id="highway-page5" class="project-image"
+            src="/public/dotnet/highway/page5.png" alt="프로그램사진" />
+          <img onclick="openImageModal(this.src)" id="highway-page6" class="project-image"
+            src="/public/dotnet/highway/page6.png" alt="프로그램사진" />
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">winform</span>
+          <span class="tech-tag">mariadb</span>
+          <span class="tech-tag">1인 개발</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub</a>
+          <a href="#" class="project-link" onclick="openRetroModal('한국도로공사 고속도로 대기오염 분석 프로그램'); return false;">회고</a>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-header">
+          <h2 class="project-title">기상 분석 프로그램</h2>
+          <span class="project-badge">통계 분석</span>
+        </div>
+        <p class="project-description">
+          기상자료 API를 활용한 기상 분석 데스트탑 앱을 개발했습니다. <br />
+          지도에 사용자가 선택한 위치에서 거리기반으로 가장 가까운 20개의 기상대 표시해주는 기능과 <br />
+          선택한 기상대의 기상자료 API를 활용하여, 분석자료, 시계열그래프, 바랑장미를 표출하는 기능에 힘썼습니다.
+        </p>
+        <div class="project-images">
+          <img onclick="openImageModal(this.src)" id="cesare-mt-page1" class="project-image"
+            src="/public/dotnet/cesare-mt/page1.png" alt="지도화면" />
+          <img onclick="openImageModal(this.src)" id="cesare-mt-page2" class="project-image"
+            src="/public/dotnet/cesare-mt/page2.png" alt="분석화면" />
+          <img onclick="openImageModal(this.src)" id="cesare-mt-page3" class="project-image"
+            src="/public/dotnet/cesare-mt/page3.png" alt="분석화면3" />
+          <img onclick="openImageModal(this.src)" id="cesare-mt-page4" class="project-image"
+            src="/public/dotnet/cesare-mt/page4.png" alt="분석화면4" />
+          <img onclick="openImageModal(this.src)" id="cesare-mt-page5" class="project-image"
+            src="/public/dotnet/cesare-mt/page5.png" alt="분석화면5" />
+        </div>
+        <div class="project-tech">
+          <span class="tech-tag">C#</span>
+          <span class="tech-tag">winform</span>
+          <span class="tech-tag">sqlite_3</span>
+          <span class="tech-tag">기상자료 api</span>
+          <span class="tech-tag">1인 개발</span>
+        </div>
+        <div class="project-links">
+          <a href="https://github.com/byeol-bit/cesare-mt.git" target="_blank" class="project-link-on">GitHub</a>
+          <a href="#" class="project-link" onclick="openRetroModal('기상 분석 프로그램'); return false;">회고</a>
         </div>
       </div>
     </div>
 
-    <script>
-      function openImageModal(imageSrc) {
-        const modal = document.getElementById("imageModal");
-        const modalImg = document.getElementById("modalImage");
-        modalImg.src = imageSrc;
-        modal.classList.add("active");
-        document.body.style.overflow = "hidden";
-      }
+    <footer>
+      <p>@2026 01.14 Portfolio. All rights reserved.</p>
+      <p>깃허브 링크</p>
+    </footer>
+  </main>
 
-      function closeImageModal() {
-        const modal = document.getElementById("imageModal");
-        modal.classList.remove("active");
-        document.body.style.overflow = "auto";
-      }
+  <!-- 이미지 확대 모달 -->
+  <div id="imageModal" class="image-modal">
+    <img id="modalImage" class="image-modal-content" src="" alt="확대된 이미지" />
+  </div>
 
-      // 모달 배경 클릭 시 닫기
-      window.addEventListener("DOMContentLoaded", function () {
-        const modal = document.getElementById("imageModal");
-        if (modal) {
-          modal.addEventListener("click", function (e) {
-            if (e.target === modal) {
-              closeImageModal();
-            }
-          });
-        }
+  <!-- 회고 모달 -->
+  <div id="retroModal" class="retro-modal">
+    <div class="retro-modal-content">
+      <div class="retro-modal-header">
+        <h2 id="retroModalTitle" class="retro-modal-title">프로젝트 회고</h2>
+        <button class="retro-modal-close" onclick="closeRetroModal()">&times;</button>
+      </div>
+      <div class="retro-modal-body">
+        <div id="retroModalContent" class="retro-content">
+          <!-- 회고 내용이 여기에 표시됩니다 -->
+        </div>
+      </div>
+    </div>
+  </div>
 
-        // ESC 키로 닫기
-        document.addEventListener("keydown", function (e) {
-          if (e.key === "Escape") {
+  <script>
+    function openImageModal(imageSrc) {
+      const modal = document.getElementById("imageModal");
+      const modalImg = document.getElementById("modalImage");
+      modalImg.src = imageSrc;
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeImageModal() {
+      const modal = document.getElementById("imageModal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    // 모달 배경 클릭 시 닫기
+    window.addEventListener("DOMContentLoaded", function () {
+      const modal = document.getElementById("imageModal");
+      if (modal) {
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) {
             closeImageModal();
+          }
+        });
+      }
+
+      // ESC 키로 닫기
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          closeImageModal();
+          closeRetroModal();
+        }
+      });
+    });
+
+    // 회고 모달 함수
+    function openRetroModal(projectTitle) {
+      const modal = document.getElementById("retroModal");
+      const titleElement = document.getElementById("retroModalTitle");
+      const contentElement = document.getElementById("retroModalContent");
+
+      titleElement.textContent = projectTitle + " - 회고";
+
+      // 프로젝트별 회고 내용 (나중에 수정 가능)
+      const retroContents = {
+        "전기자동차 배터리 공장 생산 관리 시스템":
+          `- 주요 업무
+   델파이 언어로 되어있는 통신 프로그램을 C#으로의 컨버전,
+   멀티 스레드를 사용한 현장에서의 PLC 설비와의 통신 등
+
+- 느낀점
+첫 직장이고 짧은 기간이었지만, 델파이 언어를 읽고, 간단한 디버깅을 할수 있게 되었고, 설비가 있는 공장에서 직접 c#으로 컨버전한 프로그램을 통해 직접 통신하는 기회를 가질 수 있었습니다.`,
+
+        "부산보건환경연구원 관제프로그램":
+          `
+        - 주요 업무
+Web GIS에 해당 권역, 측정소의 실시간 상태 표출,
+실시간 자료를 바탕으로 업무에 필요한 각종 통계자료 표출
+
+- 문제 해결
+4개의 기존 프로그램 통합 및 미래의 이상값을 예측해주는 AI를 추가하는 고도화 프로젝트
+
+담당 개발자가 진행하지 못하는 상황이 발생하여 프로젝트 마감 2개월 전 내가 담당하게 됨
+기존 업체로부터 전달받아야하는 자료로 전달받지 못한 상황 속에서 경험해본 적 없는 큰 규모이고, 마감기한이 촉박했지만, 한편으로는 나를 증명할 수 있는 기회라는 생각이 듦     
+나는 이 상황을 해결하기 위해 고객사가 위치한 부산으로 내려가 2주간 매일 고객사에 출근하여 프로그램 직접 테스트하며 동작과정을 기록하고, 실제 사용자를 만나 요구사항을 수집한 후, 프로그램의 기본 틀을 잡았음
+그 후 남은 기간동안 필수 기능 중심으로 구현 완료 후 납품
+납품 후 7개월간 고객사와 소통하며 프로그램을 완성시킬 수 있었음
+
+- 느낀 점
+초기에는 모든 오작동에 대한 불평불만이 나에게로 왔지만, 프로그램이 완전히 구축된 후에는 유지보수차 고객사에 갈 때마다 그간의 노고에 대한 칭찬과 함께 프로그램을 잘 사용하고 있다는 말을 들을 때마다 포기하지 않고 끝까지 개발한 것에 뿌듯함을 느꼈다. 또한 아무도 알려주지 않는다고 가만히 있는 게 아니라 직접 부딪히며 어떻게든 해결책을 만들고자 하는 노력을 언젠가는 알아봐준다는 것을 느낀 소중한 경험이었다. 
+`,
+        "한국도로공사 고속도로 대기오염 분석 프로그램":
+          `
+- 주요 업무
+1차년도 : 고속도로에 필요한 자료 입력 및 배출량 산정,
+2차년도 : Web GIS에 전국의 고속도로의 배출량에 따른 상태 표출,
+선택한 고속도로 구간 별 모델링 수행
+
+- 문제 해결
+고속도로별 운영사가 달라 양식, 고속도로명, 노선별 교통량 구간 등 각각의 데이터 양식이 모두 다르기에 원하는 양식으로 자료를 추출하는 것이 이 프로젝트의 가장 큰 난제였습니다. 이를 해결하기 위해 교통량 구간과 콘존의 매칭 알고리즘을 환경팀과 함께 직접 개발하였고, 알고리즘을 통해 매칭되지 않는 부분은 사용자가 직접 매칭할 수 있는 페이지를 만들어 직접 매칭하는 부분을 최소화하여 사용자 편의성을 높이는데 힘썼습니다.
+
+- 느낀 점
+이 프로젝트에서는 다른 무엇보다 정형화되어있는 데이터를 다루는 것이 얼마나 큰 축복인지를 깨달았습니다.
+`,
+        "기상 분석 프로그램":
+          `
+- 주요 업무
+  Web GIS에 특정 지점으로부터 가까운 20개의 측정소 표출,
+  측정소 API를 활용한 자동 자료 다운로드
+
+- 문제 해결
+이 프로젝트는 위의 프로젝트를 진행한 후 개발한 소규모 프로젝트이고, 개발 난이도도 쉬웠습니다. 그래서 이번엔 빠른 속도로 개발하는 것에 목표를 두고 1개월이라는 스스로의 개발기간을 정하고 개발속도 향상에 집중하였습니다.
+
+- 느낀 점
+여러 프로젝트를 진행한 후 개발한 소규모 프로젝트여서 개발속도 뿐만 아니라 설계 방향부터 코드 가독성까지 스스로 발전된 것을 느낄 수 있었습니다.
+`
+      };
+
+      contentElement.innerHTML = retroContents[projectTitle] || "회고 내용을 준비 중입니다.";
+
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeRetroModal() {
+      const modal = document.getElementById("retroModal");
+      modal.classList.remove("active");
+      document.body.style.overflow = "auto";
+    }
+
+    // 회고 모달 배경 클릭 시 닫기
+    window.addEventListener("DOMContentLoaded", function () {
+      const retroModal = document.getElementById("retroModal");
+      if (retroModal) {
+        retroModal.addEventListener("click", function (e) {
+          if (e.target === retroModal) {
             closeRetroModal();
           }
         });
-      });
-
-      // 회고 모달 함수
-      function openRetroModal(projectTitle) {
-        const modal = document.getElementById("retroModal");
-        const titleElement = document.getElementById("retroModalTitle");
-        const contentElement = document.getElementById("retroModalContent");
-        
-        titleElement.textContent = projectTitle + " - 회고";
-        
-        // 프로젝트별 회고 내용 (나중에 수정 가능)
-        const retroContents = {
-          "전기자동차 배터리 공장 생산 관리 시스템": 
-          `- 주요 업무
-          델파이 언어로 되어있는 통신 프로그램을 C#으로의 컨버전, 
-          멀티 스레드를 사용한 현장에서의 PLC 설비와의 통신등을 경험했습니다.
-          - 느낀점
-          첫 직장이고 짧은 기간이였지만, 델파이 언어를 읽고, 간단한 디버깅을 할수 있게 되었고,
-          직접 설비가 있는 공장에서 c#으로 컨버전한 내프로그램을 가지고 직접 통신하는 경험을 기회를 가질 수 있었습니다.
-          - 이직사유
-          코로나로 인한 회사 어려움. 권고사직`,
-
-        "부산보건환경연구원 관제프로그램": 
-        `
-        - 주요 업무
-        Web GIS에 해당 권역, 측정소의 실시간 상태 표출,
-        실시간 자료를 바탕으로 업무에 필요한 각종 통계자료 표출
-        - 문제 해결
-        일단 이 프로젝트는 위에 언급했듯 10여년간 개발&유지보수해오며 구축한 프로그램으로 각 팀당 하나씩 유사하지만 다른 4개의 프로그램으로 기존에 운영하고 있었다.
-        이 4개의 프로그램을 통합하고, 실시간 자료의 추이를 바탕으로 미래의 이상값을 예측해주는 AI까지 추가한 고도화 프로젝트 사업을 우리회사가 따내게 되면서로 다른 개발자분이 맡기로 하였다.
-        그러나 코로나에 감염되어 2달이상을 출근을 못하게되어, 내게 프로젝트가 넘어오게 되었다. 납품까지는 2달도 채 남지 않았고, 기존 업체로부터 통합디비설계 및 구축을 받기로 되어있는데
-        아직 받지도 못한 상황이였다. 사실 이때 내가 느낀 첫 감정은 '도망갈까?'였다. 왜냐면 나는 그때 사원이였고, 훨씬 소규모의 프로젝트는 맡아봤지만 이런 큰 규모의 프로젝트, 게다가 납품시기가
-        2달도 남지 않은 상황. 불가능한 프로젝트가 넘어왔음을 직감했기 때문이였다. 그러나 한 편으로는 나를 증명할 수 있는 기회라는 생각도 함께 들었고, 나는 후자를 선택하기로 했다.
-        보안 때문에 자료도 제대로 넘어오지 않고, 우리 프로젝트가 실패하길 원하는지 이전 업체에서도 비협조적이고, 넘겨준 프로시져를 돌려봐도 이상한 결과만 도출되었다. 나는 대표님께 말씀드리고 직접
-        고객사인 부산에 내려가 2주간 방을 잡고 매일 고객사에 출근하며 9-6시까지는 프로그램을 직접 테스트하며 어떻게 동작이 되어야하는지 기록하고, 촬영하고, 실제 사용자를 만나
-        요구사항을 기록하며 하루를 보내고, 퇴근 후에는 모텔방에서 개발을 해가며 기본 틀을 잡았다. 그 후 남은 2달을 회사로 올라와 개발에 몰두하였고, 완성은 못했지만 당장 사용해야하는 
-        필수 기능들 위주로 구현을 완료 후 납품을 하게 되었고, 납품 후 7개월간 매일 고객사의 전화를 받아가며 10시 11시까지 야근하며 프로그램을 완성시킬 수 있었고, 초기에는 모든 오작동에 대한 원한과 원망이 나에게로 왔지만, 
-        프로그램을 완전히 구축하고 나서는 유지보수차 고객사에 갈때마다 그간의 노고에 대한 칭찬과 함께 너무 잘 쓰고 있다는 말을 들을 때마다 포기하지 않고 끝까지 개발한 것과
-        아무도 알려주지 않는다고 가만히 있는게 아니라 직접 발로뛰어 어떻게든 해결책을 만들려는 내 노력이 언젠가는 알려지고 알아봐준다는 것에 후자를 택한 것을 너무 
-
-        `,
-          "한국도로공사 고속도로 대기오염 분석 프로그램": 
-          `
-          - 주요 업무
-          1차년도 : 고속도로에 필요한 자료 입력 및 배출량 산정,
-          2차년도 : Web GIS에 전국의 고속도로의 배출량에 따른 상태 표출,
-                   선택한 고속도로 구간 별 모델링 수행
-          - 느낀 점
-          각 고속도로별로 운영사가 달라 양식, 고속도로명, 노선별 교통량 구간 등 너무나도 데이터가 다르기에 우리가 원하는 자료를 뽑아내는 것이 이 프로젝트의 가장 큰 난제였다.
-          그래서 교통량 구간과 콘존의 매칭 알고리즘을 환경팀과 함께 직접 개발하였고, 알고리즘을 통해 매칭되지 않는 부분은 사용자가 직접 매칭할 수 있는 페이지를 만들어 직접 매칭하는 부분을
-          최소화하여 사용자 편의성을 높이는데 힘썼다. 이 프로젝트에서는 다른 무엇보다 정형화되어있는 데이터를 다루는 것이 얼마나 큰 축복인지를 깨달았다. 
-          
-          `,
-          "기상 분석 프로그램": 
-          `
-          - 주요 업무
-          Web GIS에 특정 지점으로부터 가까운 20개의 측정소 표출,
-          측정소 API를 활용한 자동 자료 다운로드
-          - 문제 해결
-          이번 프로젝트는 위에 프로젝트를 진행한 후 개발한 프로젝트여서 훨씬 소규모이고, 개발 난이도도 많이 쉬웠다. 그래서 이번엔 속도를 빠르게 개발하는 것에 목표를 두고
-          한달이라는 스스로의 개발기간을 두고 개발속도 항샹에 힘을 쓴 프로젝트였다.
-          `
-        };
-        
-        contentElement.innerHTML = retroContents[projectTitle] || "회고 내용을 준비 중입니다.";
-        
-        modal.classList.add("active");
-        document.body.style.overflow = "hidden";
       }
+    });
+  </script>
+</body>
 
-      function closeRetroModal() {
-        const modal = document.getElementById("retroModal");
-        modal.classList.remove("active");
-        document.body.style.overflow = "auto";
-      }
-
-      // 회고 모달 배경 클릭 시 닫기
-      window.addEventListener("DOMContentLoaded", function () {
-        const retroModal = document.getElementById("retroModal");
-        if (retroModal) {
-          retroModal.addEventListener("click", function (e) {
-            if (e.target === retroModal) {
-              closeRetroModal();
-            }
-          });
-        }
-      });
-    </script>
-  </body>
 </html>
