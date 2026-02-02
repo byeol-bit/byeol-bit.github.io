@@ -47,7 +47,7 @@
           </div>
           <div class="project-links">
             <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">회고</a>
+            <a href="#" class="project-link" onclick="openRetroModal('전기자동차 배터리 공장 생산 관리 시스템'); return false;">회고</a>
           </div>
         </div>
 
@@ -128,7 +128,7 @@
           </div>
           <div class="project-links">
             <a href="https://github.com/byeol-bit/AIRBRAIN.git" target="_blank" class="project-link-on">GitHub</a>
-            <a href="#" class="project-link">회고</a>
+            <a href="#" class="project-link" onclick="openRetroModal('부산보건환경연구원 관제프로그램'); return false;">회고</a>
           </div>
         </div>
 
@@ -204,7 +204,7 @@
           </div>
           <div class="project-links">
             <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">회고</a>
+            <a href="#" class="project-link" onclick="openRetroModal('한국도로공사 고속도로 대기오염 분석 프로그램'); return false;">회고</a>
           </div>
         </div>
 
@@ -263,8 +263,8 @@
             <span class="tech-tag">1인 개발</span>
           </div>
           <div class="project-links">
-            <a href="#" class="project-link">GitHub</a>
-            <a href="#" class="project-link">회고</a>
+            <a href="https://github.com/byeol-bit/cesare-mt.git" target="_blank" class="project-link-on">GitHub</a>
+            <a href="#" class="project-link" onclick="openRetroModal('기상 분석 프로그램'); return false;">회고</a>
           </div>
         </div>
       </div>
@@ -283,6 +283,21 @@
         src=""
         alt="확대된 이미지"
       />
+    </div>
+
+    <!-- 회고 모달 -->
+    <div id="retroModal" class="retro-modal">
+      <div class="retro-modal-content">
+        <div class="retro-modal-header">
+          <h2 id="retroModalTitle" class="retro-modal-title">프로젝트 회고</h2>
+          <button class="retro-modal-close" onclick="closeRetroModal()">&times;</button>
+        </div>
+        <div class="retro-modal-body">
+          <div id="retroModalContent" class="retro-content">
+            <!-- 회고 내용이 여기에 표시됩니다 -->
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
@@ -315,8 +330,95 @@
         document.addEventListener("keydown", function (e) {
           if (e.key === "Escape") {
             closeImageModal();
+            closeRetroModal();
           }
         });
+      });
+
+      // 회고 모달 함수
+      function openRetroModal(projectTitle) {
+        const modal = document.getElementById("retroModal");
+        const titleElement = document.getElementById("retroModalTitle");
+        const contentElement = document.getElementById("retroModalContent");
+        
+        titleElement.textContent = projectTitle + " - 회고";
+        
+        // 프로젝트별 회고 내용 (나중에 수정 가능)
+        const retroContents = {
+          "전기자동차 배터리 공장 생산 관리 시스템": 
+          `- 주요 업무
+          델파이 언어로 되어있는 통신 프로그램을 C#으로의 컨버전, 
+          멀티 스레드를 사용한 현장에서의 PLC 설비와의 통신등을 경험했습니다.
+          - 느낀점
+          첫 직장이고 짧은 기간이였지만, 델파이 언어를 읽고, 간단한 디버깅을 할수 있게 되었고,
+          직접 설비가 있는 공장에서 c#으로 컨버전한 내프로그램을 가지고 직접 통신하는 경험을 기회를 가질 수 있었습니다.
+          - 이직사유
+          코로나로 인한 회사 어려움. 권고사직`,
+
+        "부산보건환경연구원 관제프로그램": 
+        `
+        - 주요 업무
+        Web GIS에 해당 권역, 측정소의 실시간 상태 표출,
+        실시간 자료를 바탕으로 업무에 필요한 각종 통계자료 표출
+        - 문제 해결
+        일단 이 프로젝트는 위에 언급했듯 10여년간 개발&유지보수해오며 구축한 프로그램으로 각 팀당 하나씩 유사하지만 다른 4개의 프로그램으로 기존에 운영하고 있었다.
+        이 4개의 프로그램을 통합하고, 실시간 자료의 추이를 바탕으로 미래의 이상값을 예측해주는 AI까지 추가한 고도화 프로젝트 사업을 우리회사가 따내게 되면서로 다른 개발자분이 맡기로 하였다.
+        그러나 코로나에 감염되어 2달이상을 출근을 못하게되어, 내게 프로젝트가 넘어오게 되었다. 납품까지는 2달도 채 남지 않았고, 기존 업체로부터 통합디비설계 및 구축을 받기로 되어있는데
+        아직 받지도 못한 상황이였다. 사실 이때 내가 느낀 첫 감정은 '도망갈까?'였다. 왜냐면 나는 그때 사원이였고, 훨씬 소규모의 프로젝트는 맡아봤지만 이런 큰 규모의 프로젝트, 게다가 납품시기가
+        2달도 남지 않은 상황. 불가능한 프로젝트가 넘어왔음을 직감했기 때문이였다. 그러나 한 편으로는 나를 증명할 수 있는 기회라는 생각도 함께 들었고, 나는 후자를 선택하기로 했다.
+        보안 때문에 자료도 제대로 넘어오지 않고, 우리 프로젝트가 실패하길 원하는지 이전 업체에서도 비협조적이고, 넘겨준 프로시져를 돌려봐도 이상한 결과만 도출되었다. 나는 대표님께 말씀드리고 직접
+        고객사인 부산에 내려가 2주간 방을 잡고 매일 고객사에 출근하며 9-6시까지는 프로그램을 직접 테스트하며 어떻게 동작이 되어야하는지 기록하고, 촬영하고, 실제 사용자를 만나
+        요구사항을 기록하며 하루를 보내고, 퇴근 후에는 모텔방에서 개발을 해가며 기본 틀을 잡았다. 그 후 남은 2달을 회사로 올라와 개발에 몰두하였고, 완성은 못했지만 당장 사용해야하는 
+        필수 기능들 위주로 구현을 완료 후 납품을 하게 되었고, 납품 후 7개월간 매일 고객사의 전화를 받아가며 10시 11시까지 야근하며 프로그램을 완성시킬 수 있었고, 초기에는 모든 오작동에 대한 원한과 원망이 나에게로 왔지만, 
+        프로그램을 완전히 구축하고 나서는 유지보수차 고객사에 갈때마다 그간의 노고에 대한 칭찬과 함께 너무 잘 쓰고 있다는 말을 들을 때마다 포기하지 않고 끝까지 개발한 것과
+        아무도 알려주지 않는다고 가만히 있는게 아니라 직접 발로뛰어 어떻게든 해결책을 만들려는 내 노력이 언젠가는 알려지고 알아봐준다는 것에 후자를 택한 것을 너무 
+
+        `,
+          "한국도로공사 고속도로 대기오염 분석 프로그램": 
+          `
+          - 주요 업무
+          1차년도 : 고속도로에 필요한 자료 입력 및 배출량 산정,
+          2차년도 : Web GIS에 전국의 고속도로의 배출량에 따른 상태 표출,
+                   선택한 고속도로 구간 별 모델링 수행
+          - 느낀 점
+          각 고속도로별로 운영사가 달라 양식, 고속도로명, 노선별 교통량 구간 등 너무나도 데이터가 다르기에 우리가 원하는 자료를 뽑아내는 것이 이 프로젝트의 가장 큰 난제였다.
+          그래서 교통량 구간과 콘존의 매칭 알고리즘을 환경팀과 함께 직접 개발하였고, 알고리즘을 통해 매칭되지 않는 부분은 사용자가 직접 매칭할 수 있는 페이지를 만들어 직접 매칭하는 부분을
+          최소화하여 사용자 편의성을 높이는데 힘썼다. 이 프로젝트에서는 다른 무엇보다 정형화되어있는 데이터를 다루는 것이 얼마나 큰 축복인지를 깨달았다. 
+          
+          `,
+          "기상 분석 프로그램": 
+          `
+          - 주요 업무
+          Web GIS에 특정 지점으로부터 가까운 20개의 측정소 표출,
+          측정소 API를 활용한 자동 자료 다운로드
+          - 문제 해결
+          이번 프로젝트는 위에 프로젝트를 진행한 후 개발한 프로젝트여서 훨씬 소규모이고, 개발 난이도도 많이 쉬웠다. 그래서 이번엔 속도를 빠르게 개발하는 것에 목표를 두고
+          한달이라는 스스로의 개발기간을 두고 개발속도 항샹에 힘을 쓴 프로젝트였다.
+          `
+        };
+        
+        contentElement.innerHTML = retroContents[projectTitle] || "회고 내용을 준비 중입니다.";
+        
+        modal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeRetroModal() {
+        const modal = document.getElementById("retroModal");
+        modal.classList.remove("active");
+        document.body.style.overflow = "auto";
+      }
+
+      // 회고 모달 배경 클릭 시 닫기
+      window.addEventListener("DOMContentLoaded", function () {
+        const retroModal = document.getElementById("retroModal");
+        if (retroModal) {
+          retroModal.addEventListener("click", function (e) {
+            if (e.target === retroModal) {
+              closeRetroModal();
+            }
+          });
+        }
       });
     </script>
   </body>
