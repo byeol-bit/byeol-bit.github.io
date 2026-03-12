@@ -1,5 +1,11 @@
 import { useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
+import {
+  dotnetProjects,
+  electronProjects,
+  nextjsProjects,
+  reactProjects,
+} from '../data/projects'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -209,7 +215,7 @@ const HomePage = () => {
                   C#
                   <i />
                 </div>
-                <div className="stats-content">4</div>
+                <div className="stats-content">{dotnetProjects.length}</div>
               </div>
 
               <div
@@ -220,7 +226,7 @@ const HomePage = () => {
                   Electron
                   <i />
                 </div>
-                <div className="stats-content">1</div>
+                <div className="stats-content">{electronProjects.length}</div>
               </div>
 
               <div
@@ -231,7 +237,7 @@ const HomePage = () => {
                   React
                   <i />
                 </div>
-                <div className="stats-content">0</div>
+                <div className="stats-content">{reactProjects.length}</div>
               </div>
 
               <div
@@ -242,7 +248,7 @@ const HomePage = () => {
                   NextJS
                   <i />
                 </div>
-                <div className="stats-content">1</div>
+                <div className="stats-content">{nextjsProjects.length}</div>
               </div>
 
               <div className="stats-title">
@@ -255,7 +261,7 @@ const HomePage = () => {
 
               <div className="stats-grid-commits stats-item">
                 <div className="stats-header">
-                  프로래머스 - 데브코스 9기/10회 수료중...
+                  프로래머스 - 데브코스 풀스택 과정 수료중
                 </div>
               </div>
             </div>

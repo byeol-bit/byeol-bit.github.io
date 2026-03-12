@@ -7,7 +7,7 @@ export type ProjectLink = {
   label: string;
   href?: string;
   external?: boolean;
-  type?: "primary" | "default";
+  type?: "primary" | "default" | "retrospect";
 };
 
 export type Project = {
@@ -18,6 +18,7 @@ export type Project = {
   images: ProjectImage[];
   techTags: string[];
   links: ProjectLink[];
+  retrospectiveLines?: string[];
 };
 
 export const dotnetProjects: Project[] = [
@@ -32,7 +33,14 @@ export const dotnetProjects: Project[] = [
     techTags: ["C#", "winform", "PLC 통신", "Oracle"],
     links: [
       { label: "GitHub", type: "default" },
-      { label: "회고", type: "default" },
+      { label: "회고", type: "retrospect" },
+    ],
+    retrospectiveLines: [
+      "⦁	주요 업무",
+      "델파이 언어로 되어있는 통신 프로그램을 C#으로의 컨버전, 멀티 스레드를 사용한 현장에서의 PLC 설비와의 통신 등",
+      "",
+      "⦁	느낀점",
+      "첫 직장이고 짧은 기간이었지만, 델파이 언어를 읽고, 간단한 디버깅을 할수 있게 되었고, 설비가 있는 공장에서 직접 c#으로 컨버전 한 프로그램을 통해 직접 통신하는 기회를 가질 수 있었습니다.",
     ],
   },
   {
@@ -62,7 +70,26 @@ export const dotnetProjects: Project[] = [
         external: true,
         type: "primary",
       },
-      { label: "회고", type: "default" },
+      { label: "회고", type: "retrospect" },
+    ],
+    retrospectiveLines: [
+      "⦁	주요 업무",
+      "Web GIS에 해당 권역, 측정소의 실시간 상태 표출,",
+      "실시간 자료를 바탕으로 업무에 필요한 각종 통계자료 표출",
+      "",
+      "⦁	문제 해결",
+      "4개의 기존 프로그램 통합 및 미래의 이상값을 예측해주는 AI를 추가하는 고도화 프로젝트",
+      "",
+      "담당 개발자가 진행하지 못하는 상황이 발생하여 프로젝트 마감 2개월 전 내가 담당하게 됨",
+      "기존 업체로부터 전달받아야하는 자료로 전달받지 못한 상황 속에서 경험해본 적 없는 큰 규모이고,",
+      " 마감기한이 촉박했지만, 한편으로는 나를 증명할 수 있는 기회라는 생각이 듦",
+      "나는 이 상황을 해결하기 위해 고객사가 위치한 부산으로 내려가 2주간 매일 고객사에 출근하여 프로그램 직접 테스트하며 동작과정 을 기록하고, 실제 사용자를 만나 요구사항을 수집한 후, 프로그램의 기본 틀을 잡았음",
+      "그 후 남은 기간동안 필수 기능 중심으로 구현 완료 후 납품",
+      "납품 후 7개월간 고객사와 소통하며 프로그램을 완성시킬 수 있었음",
+      "",
+      "⦁	느낀 점",
+      "초기에는 모든 오작동에 대한 불평불만이 나에게로 왔지만, 프로그램이 완전히 구축된 후에는 유지보수차 고객사에 갈 때마다 그간의 노고에 대한 칭찬과 함께 프로그램을 잘 사용하고 있다는 말을 들을 때마다 포기하지 않고 끝까지 개발한 것에 뿌듯함을 느꼈다.",
+      "또한 아무도 알려주지 않는다고 가만히 있는 게 아니라 직접 부딪히며 어떻게든 해결책을 만들고자 하는 노력을 언젠가는 알아봐준다는 것을 느낀 소중한 경험이었다.",
     ],
   },
   {
@@ -86,7 +113,19 @@ export const dotnetProjects: Project[] = [
     techTags: ["C#", "winform", "mariadb", "1인 개발"],
     links: [
       { label: "GitHub", type: "default" },
-      { label: "회고", type: "default" },
+      { label: "회고", type: "retrospect" },
+    ],
+    retrospectiveLines: [
+      "⦁	주요 업무",
+      "1차년도 : 고속도로에 필요한 자료 입력 및 배출량 산정,",
+      "2차년도 : Web GIS에 전국의 고속도로의 배출량에 따른 상태 표출,",
+      "선택한 고속도로 구간 별 모델링 수행",
+      "",
+      "⦁	문제 해결",
+      "고속도로별 운영사가 달라 양식, 고속도로명, 노선별 교통량 구간 등 각각의 데이터 양식이 모두 다르기에 원하는 양식으로 자료를 추 출하는 것이 이 프로젝트의 가장 큰 난제였습니다.",
+      "이를 해결하기 위해 교통량 구간과 콘존의 매칭 알고리즘을 환경팀과 함께 직접 개발하였고, 알고리즘을 통해 매칭되지 않는 부분은 사용자가 직접 매칭할 수 있는 페이지를 만들어 직접 매칭하는 부분을 최소화하여 사용자 편의성을 높이는데 힘썼습니다.",
+      "⦁	느낀 점",
+      "이 프로젝트에서는 다른 무엇보다 정형화되어있는 데이터를 다루는 것이 얼마나 큰 축복인지를 깨달았습니다.",
     ],
   },
   {
@@ -112,7 +151,17 @@ export const dotnetProjects: Project[] = [
         external: true,
         type: "primary",
       },
-      { label: "회고", type: "default" },
+      { label: "회고", type: "retrospect" },
+    ],
+    retrospectiveLines: [
+      "⦁	주요 업무",
+      "Web GIS에 특정 지점으로부터 가까운 20개의 측정소 표출, 측정소 API를 활용한 자동 자료 다운로드",
+      "",
+      "⦁	문제 해결",
+      "이 프로젝트는 위의 프로젝트를 진행한 후 개발한 소규모 프로젝트이고, 개발 난이도도 쉬웠습니다. 그래서 이번엔 빠른 속도로 개발 하는 것에 목표를 두고 1개월이라는 스스로의 개발기간을 정하고 개발속도 향상에 집중하였습니다.",
+      "",
+      "⦁	느낀 점",
+      "여러 프로젝트를 진행한 후 개발한 소규모 프로젝트여서 개발속도 뿐만 아니라 설계 방향부터 코드 가독성까지 스스로 발전된 것을 느낄 수 있었습니다.",
     ],
   },
 ];
@@ -166,17 +215,23 @@ export const nextjsProjects: Project[] = [
 
 export const reactProjects: Project[] = [
   {
-    id: "todo-example",
-    title: "할 일 관리 앱 (예시)",
+    id: "find-hidden-master",
+    title: "지도로 보는 맛집 로그",
     badges: ["SPA", "예시"],
     descriptionLines: [
-      "React와 로컬 스토리지를 사용한 할 일(Todo) 관리 SPA 예시 프로젝트입니다.",
-      "할 일 추가·수정·삭제(CRUD)와 상태별 필터(전체/진행중/완료) 기능을 구현했으며, 컴포넌트 분리와 상태 관리 흐름을 연습하기 위해 제작했습니다.",
+      "데브코스 과정에서 진행한 첫번째 프로젝트입니다.",
+      "카카오맵API를 활용한 식당 추가, 유저의 리뷰를 기반으로 한 경로 추적 기능을 담은 맛집을 찾아다니는 플랫폼입니다.",
+      "팀장직을 부여받고, 카카오맵API로 경로를 추적하는 기능과 지도페이지의 레이아웃, 사이드바 구현을 담당해 작업했습니다.",
     ],
     images: [],
-    techTags: ["React", "JavaScript", "CSS"],
+    techTags: ["React", "Node.js", "Express"],
     links: [
-      { label: "GitHub", type: "default" },
+      {
+        label: "GitHub",
+        href: "https://github.com/byeol-bit/memto-first-project-frontend",
+        external: true,
+        type: "primary",
+      },
       { label: "회고", type: "default" },
     ],
   },
