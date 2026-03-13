@@ -87,7 +87,7 @@ a {
   width: 18px;
   height: 18px;
   color: #4e5968;
-  background-image: url("/public/fa-book-before.png");
+  background-image: url("/fa-book-before.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -536,7 +536,7 @@ a {
   width: 23px;
   height: 23px;
   color: #4e5968;
-  background-image: url("/public/fa-dotnet.png");
+  background-image: url("/fa-dotnet.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -552,7 +552,7 @@ a {
   width: 23px;
   height: 23px;
   color: #4e5968;
-  background-image: url("/public/fa-electron.png");
+  background-image: url("/fa-electron.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -568,7 +568,7 @@ a {
   width: 23px;
   height: 23px;
   color: #4e5968;
-  background-image: url("/public/fa-react.png");
+  background-image: url("/fa-react.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -584,7 +584,7 @@ a {
   width: 23px;
   height: 23px;
   color: #4e5968;
-  background-image: url("/public/fa-nextjs.png");
+  background-image: url("/fa-nextjs.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -854,7 +854,7 @@ footer i::before {
   width: 18px;
   height: 18px;
   color: #4e5968;
-  background-image: url("/public/fa-github.png");
+  background-image: url("/fa-github.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

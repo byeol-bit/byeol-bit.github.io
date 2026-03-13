@@ -24,7 +24,7 @@ const HomePage = () => {
         <div />
         <div className="top-nav-right">
           <button type="button">
-            <img src="/public/fa-moon.png" alt="다크모드" />
+            <img src="/fa-moon.png" alt="다크모드" />
           </button>
           <a
             href="https://github.com/byeol-bit/byeol-bit.github.io.git"
@@ -50,7 +50,7 @@ const HomePage = () => {
           <div className="main-area-left-image">
             <img
               className="profile-image"
-              src="/public/my_charactor.jpg"
+              src="/my_charactor.jpg"
               alt="메인 이미지"
             />
           </div>
@@ -64,7 +64,7 @@ const HomePage = () => {
               onClick={openKakao}
             >
               <img
-                src="/public/fa-openchat.png"
+                src="/fa-openchat.png"
                 alt="오픈채팅"
                 width={20}
                 height={20}
@@ -73,7 +73,7 @@ const HomePage = () => {
             </button>
             <button type="button" onClick={openGithub}>
               <img
-                src="/public/fa-github.png"
+                src="/fa-github.png"
                 alt="깃허브"
                 width={20}
                 height={20}
@@ -131,7 +131,7 @@ const HomePage = () => {
             <h3 className="profile-section-title">자격증</h3>
             <div className="certificate-item">
               <img
-                src="/public/fa-hrdk.png"
+                src="/fa-hrdk.png"
                 alt="정보처리기사"
                 className="certificate-icon"
               />
@@ -139,7 +139,7 @@ const HomePage = () => {
             </div>
             <div className="certificate-item">
               <img
-                src="/public/fa-sqld.png"
+                src="/fa-sqld.png"
                 alt="SQLD"
                 className="certificate-icon"
               />
@@ -200,10 +200,7 @@ const HomePage = () => {
           <div className="main-area-right-bottom">
             <div className="stats-grid">
               <div className="stats-title">
-                <img
-                  src="/public/fa-project.png"
-                  alt="프로젝트 아이콘"
-                />
+                <img src="/fa-project.png" alt="프로젝트 아이콘" />
                 프로젝트
               </div>
 
@@ -252,10 +249,7 @@ const HomePage = () => {
               </div>
 
               <div className="stats-title">
-                <img
-                  src="/public/fa-education.png"
-                  alt="교육"
-                />
+                <img src="/fa-education.png" alt="교육" />
                 교육
               </div>
 
@@ -270,7 +264,7 @@ const HomePage = () => {
       </div>
 
       <footer>
-        <p>@2026 01.14에 HTML/CSS로만 제작된 페이지입니다.</p>
+        <p>@2026 03.13에 마지막으로 업데이트되었습니다.</p>
         <a href="https://github.com/byeol-bit" target="_blank" rel="noreferrer">
           <i>byeol-bit</i>
         </a>

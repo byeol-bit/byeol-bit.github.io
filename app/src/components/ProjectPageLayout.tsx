@@ -21,7 +21,7 @@ export const ProjectPageLayout = ({
         </div>
         <div className="top-nav-right">
           <button type="button">
-            <img src="/public/fa-moon.png" alt="다크모드" />
+            <img src="/fa-moon.png" alt="다크모드" />
           </button>
           <a href="#">사용 가이드</a>
         </div>
