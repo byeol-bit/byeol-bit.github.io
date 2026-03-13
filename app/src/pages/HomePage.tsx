@@ -6,6 +6,7 @@ import {
   nextjsProjects,
   reactProjects,
 } from '../data/projects'
+import { ThemeToggleButton } from '../components/ThemeToggleButton'
 
 const HomePage = () => {
   const navigate = useNavigate()
@@ -23,16 +24,7 @@ const HomePage = () => {
       <div className="top-nav fade-in-up">
         <div />
         <div className="top-nav-right">
-          <button type="button">
-            <img src="/fa-moon.png" alt="다크모드" />
-          </button>
-          <a
-            href="https://github.com/byeol-bit/byeol-bit.github.io.git"
-            target="_blank"
-            rel="noreferrer"
-          >
-            사용 가이드
-          </a>
+          <ThemeToggleButton />
         </div>
       </div>
 
@@ -50,7 +42,7 @@ const HomePage = () => {
           <div className="main-area-left-image">
             <img
               className="profile-image"
-              src="/one-hundred-percent-attached-charactor.png"
+              src="/one-hundred-percent-attached-character.png"
               alt="내 캐릭터"
             />
           </div>

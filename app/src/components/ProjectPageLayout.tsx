@@ -1,4 +1,5 @@
 import type { ReactNode } from 'react'
+import { ThemeToggleButton } from './ThemeToggleButton'
 
 type ProjectPageLayoutProps = {
   title: string
@@ -20,9 +21,7 @@ export const ProjectPageLayout = ({
           </a>
         </div>
         <div className="top-nav-right">
-          <button type="button">
-            <img src="/fa-moon.png" alt="다크모드" />
-          </button>
+          <ThemeToggleButton />
           <a href="#">사용 가이드</a>
         </div>
       </div>

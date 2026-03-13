@@ -15,6 +15,37 @@ body {
   background-color: #f2f4f6;
 }
 
+html.theme-dark body {
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+html.theme-dark .main-area-left,
+html.theme-dark .main-area-right-top,
+html.theme-dark .main-area-right-bottom,
+html.theme-dark .project-card {
+  background-color: #020617;
+  border-color: #1f2937;
+  box-shadow: 0 4px 24px rgba(15, 23, 42, 0.7);
+}
+
+html.theme-dark .portfolio-title,
+html.theme-dark .portfolio-subtitle,
+html.theme-dark .profile-name,
+html.theme-dark .profile-age,
+html.theme-dark .career-title,
+html.theme-dark .career-label,
+html.theme-dark .stats-title,
+html.theme-dark .stats-content,
+html.theme-dark .stats-header {
+  color: #e5e7eb;
+}
+
+html.theme-dark .main-area-right-bottom,
+html.theme-dark .main-area-right-top {
+  border: 1px solid #1f2937;
+}
+
 a {
   text-decoration: none;
   color: #4e5968;
