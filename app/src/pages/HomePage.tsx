@@ -50,8 +50,8 @@ const HomePage = () => {
           <div className="main-area-left-image">
             <img
               className="profile-image"
-              src="/my_charactor.jpg"
-              alt="메인 이미지"
+              src="/one-hundred-percent-attached-charactor.png"
+              alt="내 캐릭터"
             />
           </div>
           <h2 className="profile-name">박상선</h2>
@@ -105,7 +105,7 @@ const HomePage = () => {
             <h3 className="profile-section-title">소개</h3>
             <div className="about-text">
               <p className="about-highlight">
-                <strong>제품에 무한한 애정을 쏟습니다.</strong>
+                <strong>사소한 것을 그냥 지나치지 않습니다.</strong>
               </p>
               <ul className="about-list">
                 <li>
