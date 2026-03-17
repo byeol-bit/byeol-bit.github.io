@@ -30,10 +30,10 @@ const HomePage = () => {
 
       <header className="header-area fade-in-up">
         <a href="/">
-          <h1 className="portfolio-title">포트폴리오</h1>
+          <h1 className="portfolio-title">경력기술서</h1>
         </a>
         <p className="portfolio-subtitle">
-          정체되지 않고 나아가고싶은 개발자의 포트폴리오입니다.
+          제가 지금껏 해왔고, 하고있는 프로젝트에 대해 기술스택별로 나열했습니다.
         </p>
       </header>
 
